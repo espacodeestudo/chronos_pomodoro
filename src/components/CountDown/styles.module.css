@@ -1,0 +1,11 @@
+.co_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.co_content{
+    font-size: clamp(8rem, 25vw, 16rem);
+    font-weight: 800;
+    line-height: 1.3;
+}

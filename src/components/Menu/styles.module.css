@@ -1,0 +1,41 @@
+.me_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.me_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+
+}
+
+.me_link {
+  display: inline-flex;
+  align-items: center;
+  justify-items: center;
+  gap: 0.4rem;
+
+  font-weight: 800;
+  font-size: 4.2rem;
+  text-decoration: none;
+  color: var(--text-over-primary);
+
+  padding: 1.2rem;
+
+  background: var(--primary);
+  border-radius: 0.8rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.me_link svg {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.me_link:hover {
+  filter: brightness(80%);
+}

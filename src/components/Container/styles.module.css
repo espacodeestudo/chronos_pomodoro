@@ -1,0 +1,11 @@
+.co_container_fluid {
+}
+
+.co_container {
+  max-width: 98rem;
+  margin: 0 auto;
+}
+
+.co_content {
+  margin: 3.3rem;
+}
