@@ -1,5 +1,7 @@
 import React from "react";
 
+import { DefaultInput } from "../DafaulrInput";
+
 import styles from "./styles.module.css";
 
 function Form() {
@@ -10,10 +12,7 @@ function Form() {
           <div className={styles.fo_content}>
             <form className={styles.fo_form}>
               <div className={styles.fo_formGroup}>
-                <label className={styles.fo_label} htmlFor="taskForm">
-                  Task
-                </label>
-                <input type="text" id="taskForm" />
+                <DefaultInput type="number" text="task" htmlFor="taskInput" />
               </div>
               <div className={styles.fo_formGroup}>
                 <p>Lorem ipsum dolor sit amet!</p>
