@@ -1,5 +1,9 @@
+import { PlayCircleIcon } from "lucide-react";
+
 import React from "react";
 
+import { Button } from "../Button";
+import { Cycles } from "../Cycles";
 import { DefaultInput } from "../DafaulrInput";
 
 import styles from "./styles.module.css";
@@ -12,18 +16,22 @@ function Form() {
           <div className={styles.fo_content}>
             <form className={styles.fo_form}>
               <div className={styles.fo_formGroup}>
-                <DefaultInput type="number" text="task" htmlFor="taskInput" />
+                <DefaultInput
+                  type="number"
+                  text="task"
+                  htmlFor="taskInput"
+                  placeholder="task"
+                />
               </div>
               <div className={styles.fo_formGroup}>
                 <p>Lorem ipsum dolor sit amet!</p>
               </div>
               <div className={styles.fo_formGroup}>
-                <p>Ciclos</p>
-                <p>0 0 0 0 0 0 0</p>
+                <Cycles />
               </div>
 
               <div className={styles.fo_formGroup}>
-                <button>Enviar</button>
+                <Button icon={<PlayCircleIcon />} />
               </div>
             </form>
           </div>

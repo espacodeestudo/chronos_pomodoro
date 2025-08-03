@@ -7,7 +7,7 @@ interface HeadingProps {
   icon?: React.ReactNode;
 }
 
-function Heading({ text, icon }: HeadingProps) {
+function Heading({ icon, text }: HeadingProps) {
   return (
     <React.Fragment>
       <div className={styles.h_wrapper}>

@@ -1,0 +1,40 @@
+.cy_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cy_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.cy_dots {
+  display: flex;
+  gap: .8rem;
+}
+
+.cy_dot {
+  display: block;
+
+  width: 2rem;
+  height: 2rem;
+
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.cy_workTime {
+  background: var(--warning);
+}
+
+.cy_shortBreakTime {
+  background: var(--primary);
+}
+
+.cy_longBreakTime {
+  background: var(--info);
+}

@@ -8,7 +8,7 @@ interface DefaultInputProps
   htmlFor: string;
 }
 
-function DefaultInput({ type, text, htmlFor }: DefaultInputProps) {
+function DefaultInput({ htmlFor, text, type, ...rest }: DefaultInputProps) {
   return (
     <React.Fragment>
       <div className={styles.de_wrapper}>
@@ -17,7 +17,12 @@ function DefaultInput({ type, text, htmlFor }: DefaultInputProps) {
             <label className={styles.de_label} htmlFor={htmlFor}>
               {text}
             </label>
-            <input type={type} id={htmlFor} className={styles.de_input} />
+            <input
+              type={type}
+              id={htmlFor}
+              className={styles.de_input}
+              {...rest}
+            />
           </div>
         </div>
       </div>

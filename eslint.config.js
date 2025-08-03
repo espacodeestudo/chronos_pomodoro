@@ -27,7 +27,7 @@ export default tseslint.config([
       "perfectionist/sort-exports": [
         "error",
         {
-          type: "alphabetical", // ou 'natural'
+          type: "alphabetical",
           order: "asc",
         },
       ],
@@ -36,10 +36,16 @@ export default tseslint.config([
         {
           type: "alphabetical",
           order: "asc",
-          newlinesBetween: "ignore", 
+          newlinesBetween: "ignore",
         },
       ],
-
+      "perfectionist/sort-objects": [
+        "error",
+        {
+          type: "alphabetical",
+          order: "asc",
+        },
+      ],
     },
   },
 ]);
