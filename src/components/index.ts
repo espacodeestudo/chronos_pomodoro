@@ -3,6 +3,7 @@ export * from "./Container";
 export * from "./CountDown";
 export * from "./Cycles";
 export * from "./DafaulrInput";
+export * from "./footer";
 export * from "./Form";
 export * from "./Heading";
 export * from "./Logo";

@@ -1,0 +1,1 @@
+export { MainTamplate } from "./mainTemplate";

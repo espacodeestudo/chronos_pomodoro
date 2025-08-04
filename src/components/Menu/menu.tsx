@@ -1,9 +1,36 @@
-import { HouseIcon, HistoryIcon, SettingsIcon, SunIcon } from "lucide-react";
-import React from "react";
+import { HouseIcon, HistoryIcon, MoonIcon, SettingsIcon, SunIcon } from "lucide-react";
+
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./styles.module.css";
 
 function Menu() {
+
+  type AvailableThemes = "dark" | "light";
+  const [theme, setTheme] = useState<AvailableThemes>(() => {
+    const savedTheme = (localStorage.getItem("theme") as AvailableThemes) || "dark";
+    return savedTheme 
+  });
+
+  function handleThemeChange(
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  ) {
+    event.preventDefault();
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+  }
+
+  const nextIconTheme = {
+    dark: <SunIcon />,
+    light: <MoonIcon />,
+  }
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  console.log("Theme changed to:", theme);
   return (
     <React.Fragment>
       <header className={styles.me_wrapper}>
@@ -11,24 +38,41 @@ function Menu() {
           <div className={styles.me_content}>
             <ul className={styles.me_list}>
               <li>
-                <a href="#" className={styles.me_link}>
+                <Link
+                  to="/"
+                  className={styles.me_link}
+                  aria-label="Home"
+                  title="Home">
                   <HouseIcon />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className={styles.me_link}>
+                <Link
+                  to="history"
+                  className={styles.me_link}
+                  aria-label="History"
+                  title="History">
                   <HistoryIcon />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className={styles.me_link}>
+                <Link
+                  to="settings"
+                  className={styles.me_link}
+                  aria-label="Configurações"
+                  title="Configurações">
                   <SettingsIcon />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className={styles.me_link}>
-                  <SunIcon />
-                </a>
+                <Link
+                  to="#"
+                  className={styles.me_link}
+                  aria-label="Tema"
+                  title="Tema"
+                  onClick={handleThemeChange}>
+                 {nextIconTheme[theme]}
+                </Link>
               </li>
             </ul>
           </div>
