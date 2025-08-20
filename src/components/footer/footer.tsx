@@ -1,5 +1,7 @@
 import React from "react";
 
+import { RouterLink } from "../RouterLink";
+
 import styles from "./styles.module.css";
 
 function Footer() {
@@ -9,12 +11,12 @@ function Footer() {
         <div className={styles.fo_container}>
           <ul className={styles.fo_content}>
             <li>
-              <a href="#" className={styles.fo_link}>
+              <RouterLink href="/about" >
                 Entenda como fumciona tecnica do pomodoro
-              </a>
+              </RouterLink>
             </li>
             <li>
-              <a href="#" className={styles.fo_link}>
+              <a href="/" className={styles.fo_link}>
                 Chronos Pomodoro &copy; {new Date().getFullYear()}
               </a>
             </li>

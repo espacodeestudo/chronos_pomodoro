@@ -2,7 +2,10 @@ import React from "react";
 
 import { Container, CountDown, Form } from "../../components";
 
+
 function Home() {
+
+  
   return (
     <React.Fragment>
       <Container>
@@ -13,6 +16,7 @@ function Home() {
       </Container>
     </React.Fragment>
   );
+
 }
 
 export { Home };

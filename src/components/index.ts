@@ -5,6 +5,8 @@ export * from "./Cycles";
 export * from "./DafaulrInput";
 export * from "./footer";
 export * from "./Form";
+export * from "./GenericHtml";
 export * from "./Heading";
 export * from "./Logo";
 export * from "./Menu";
+export * from "./RouterLink";

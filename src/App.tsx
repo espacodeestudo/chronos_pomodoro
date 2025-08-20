@@ -1,11 +1,15 @@
 import React from "react";
 
+import { TaskContextProvider } from "./context";
+
 import { Router } from "./routers/router";
 
 function App() {
   return (
     <React.Fragment>
-      <Router/>
+      <TaskContextProvider>
+        <Router />
+      </TaskContextProvider>
     </React.Fragment>
   );
 }
